@@ -199,4 +199,8 @@ footer {
   .search-bar {
     width: 80%;
   }
+
+  html {
+    font-size: 50%;
+  }
 }
