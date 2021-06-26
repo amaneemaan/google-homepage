@@ -1,21 +1,3 @@
-:root {
-  --border-color: #ddd;
-  --button-search-font: #3c4043;
-  --button-search-background: #f8f9fa;
-  --footer-background: #f2f2f2;
-  --footer-font: #70757a;
-  --footer-font-hover: #3c4043;
-  --footer-font-active: #ea4335;
-}
-
-*,
-::before,
-::after {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
 html {
   font-size: 62.5%;
 }
@@ -25,8 +7,6 @@ body {
   font-size: 1.6rem;
   line-height: 1.6;
 }
-
-/* CUSTOM TAGS */
 
 a {
   color: inherit;
@@ -41,6 +21,8 @@ img {
 input {
   border: none;
   outline: none;
+  width: 90%;
+  font-size: 1.6rem;
 }
 
 button {
@@ -53,9 +35,7 @@ button:focus {
   outline: none;
 }
 
-/* NAV */
-
-.nav {
+nav {
   width: auto;
   display: flex;
   align-items: center;
@@ -64,67 +44,49 @@ button:focus {
   font-size: 1.3rem;
 }
 
-.nav-link {
+.nav {
   margin-right: 1.5rem;
   opacity: 0.85;
 }
 
-.nav-link:hover {
+.nav:hover {
   text-decoration: underline;
 }
 
-.button-apps {
-  width: 30px;
-  height: 30px;
+.apps {
+  width: 36px;
+  height: 36px;
+  padding: 10px;
   margin-right: 1.5rem;
   background-color: #fff;
-  background-image: url("//ssl.gstatic.com/gb/images/i1_1967ca6a.png");
+  border-radius: 50%;
   background-position: -132px -38px;
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
-.button-apps:hover,
-.button-apps:focus {
-  opacity: 0.85;
+.apps:hover {
+  background-color:#ddd;
+  border-radius: 50%
 }
 
-.user-avatar img {
-  height: 34px;
-  width: 34px;
-  border: 1px solid #ddd;
+.profile-picture img {
+  height: 36px;
+  width: 36px;
+  border: 3px solid #fff;
   border-radius: 50%;
   margin-right: 3rem;
 }
 
-.user-avatar:hover img {
-  border: 1px solid #aaa;
+.profile-picture:hover img {
+  border: 3px solid #ddd;
 }
 
-/* Currently using user icon */
-
-.button-sign-in {
-  padding: 0.7rem 1rem;
-  border-radius: 3px;
-  margin-right: 3rem;
-  background-color: rgb(69, 133, 244);
-  color: #fff;
-  font-weight: bold;
-  opacity: 0.95;
-}
-
-.button-sign-in:hover,
-.button-sign-in:focus {
-  opacity: 1;
-}
-
-/* MAIN */
-
-.main {
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  margin-top: 15rem;
+  margin-top: 10rem;
 }
 
 .logo {
@@ -133,19 +95,19 @@ button:focus {
   margin-bottom: 3rem;
 }
 
-.searchbar {
+.search-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 580px;
   padding: 1rem;
   padding-right: 1.5rem;
-  border: 0.1px solid var(--border-color);
+  border: 0.1px solid #ddd;
   border-radius: 30px;
 }
 
-.searchbar:hover,
-.searchbar:focus-within {
+.search-bar:hover,
+.search-bar:focus-within {
   border-color: white;
   box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
 }
@@ -156,12 +118,7 @@ button:focus {
   margin-right: 1rem;
 }
 
-.search-input {
-  width: 90%;
-  font-size: 1.6rem;
-}
-
-.microphone-icon {
+.voice-search {
   width: 25px;
   height: 25px;
 }
@@ -173,30 +130,28 @@ button:focus {
   margin-top: 2.4rem;
 }
 
-.button-search {
+.search-button {
   min-width: 54px;
   height: 36px;
   padding: 0 2rem;
   border: 1px solid transparent;
   border-radius: 5px;
   margin: 0.7rem;
-  background-color: var(--button-search-background);
-  color: var(--button-search-font);
+  background-color: #f8f9fa;
+  color: #3c4043;
   font-size: 1.4rem;
 }
 
-.button-search:hover {
+.search-button:hover {
   border-color: #dadce0;
   box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
 }
 
-.button-search:focus {
+.search-button:focus {
   border-color: blue;
 }
 
-/* FOOTER */
-
-.footer {
+footer {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -204,47 +159,44 @@ button:focus {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  border: 1px solid var(--border-color);
-  background: var(--footer-background);
-  color: var(--footer-font);
+  border: 1px solid #ddd;
+  background: #f2f2f2;
+  color: #70757a;
   font-size: 1.4rem;
 }
 
-.left-section,
-.right-section {
+.left,
+.right {
   display: flex;
 }
 
-.right-section {
+.right {
   margin-right: 3rem;
 }
 
-.footer-link {
+.footer {
   display: block;
   padding: 1rem 0 1rem 3rem;
 }
 
-.footer-link:hover {
+.footer:hover {
   text-decoration: underline;
-  color: var(--footer-font-hover);
 }
 
-.footer-link:active {
-  color: var(--footer-font-active);
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
-
-/* Media queries */
 
 @media (max-width: 660px) {
-  .footer {
+  footer {
     flex-direction: column;
   }
 
-  .searchbar {
+  .search-bar {
     width: 80%;
-  }
-
-  html {
-    font-size: 50%;
   }
 }
